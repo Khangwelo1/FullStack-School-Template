@@ -19,13 +19,19 @@ function Contact() {
   }
   const updateContact = async () => {
     try {
-      await axios.put(`http://localhost:8080/contact/${contact.id}`, contact);
+      // Assuming you want to send contact details for update
+      const response = await axios.put('http://localhost:8080/contact/1', contact);
       alert('Contact updated successfully!');
       window.location.href = '/';
+      // console.log(response.data)
     } catch (error) {
-      console.error("Error updating contact: ", error);
+      // Assuming you want to send new contact details for creation
+      const response = await axios.post('http://localhost:8080/contact', contact);
+      alert('Contact created successfully!');
+      window.location.href = '/';
+      // console.log(response.data)
     }
-  }
+  };
   const handleInputChange = (e) => {
     setContact({
       ...contact,

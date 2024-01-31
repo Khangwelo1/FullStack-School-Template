@@ -21,6 +21,7 @@ const ContactDisplay = () => {
     }
   return (
     <div className="container">
+      
         <div className="notification">
         <div className="notiglow"></div>
         <div className="notiborderglow"></div>
@@ -63,24 +64,8 @@ const ContactDisplay = () => {
         <div className="notititle">TikTok Link</div>
         <a href={`${contact.tikTokLink}`} className="notibody">{contact.tikTokLink}</a>
       </div>
-      <div className="notification">
-        <div className="notiglow"></div>
-        <div className="notiborderglow"></div>
-        <div className="notititle">Mission</div>
-        <a href="#" className="notibody">{contact.mission}</a>
-        </div>
-        <div className="notification">
-        <div className="notiglow"></div>
-        <div className="notiborderglow"></div>
-        <div className="notititle">Vision</div>
-        <a href="#" className="notibody">{contact.vision}</a>
-        </div>
-        <div className="notification">
-        <div className="notiglow"></div>
-        <div className="notiborderglow"></div>
-        <div className="notititle">About Us</div>
-        <a href="#" className="notibody">{contact.aboutUs}</a>
-        </div>
+      
+        
       <button data-label="Register" class="rainbow-hover" onClick={update}>
   <span class="sp">Update</span>
 </button>
